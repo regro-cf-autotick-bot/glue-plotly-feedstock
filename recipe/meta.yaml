@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "glue-plotly" %}
-{% set version = "0.12.3" %}
+{% set version = "0.13.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: ca731b775886e5ee288586aec0efc6210b0b6d11ff257efb1a68a269cf2b86b4
+  sha256: e52375901176abc4163ce5be72a73b66463603f611aa57d3c471075da7d868a8
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
